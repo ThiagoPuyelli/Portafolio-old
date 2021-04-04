@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = __importDefault(require("express"));
 const morgan_1 = __importDefault(require("morgan"));
 const project_routes_1 = __importDefault(require("./routes/project.routes"));
+const admin_routes_1 = __importDefault(require("./routes/admin.routes"));
 exports.default = (app) => {
     // Port
     app.set("port", process.env.PORT || 6000);
@@ -23,6 +24,7 @@ exports.default = (app) => {
     });
     // Routes
     app.use(project_routes_1.default);
+    app.use(admin_routes_1.default);
     // Return
     return app;
 };

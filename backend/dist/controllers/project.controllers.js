@@ -90,9 +90,9 @@ var updateProject = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
     if (project) {
         if (req.file) {
             const imageDelete = yield cloudinary_1.v2.uploader.destroy(project.public_id);
-            if (imageDelete)
+            if (!imageDelete)
                 res.json({ error: "Error al eliminar la imagen anterior" });
-            const imageUpload = yield cloudinary_1.v2.uploader.upload(__dirname + "../uploads/" + req.file.filename);
+            const imageUpload = yield cloudinary_1.v2.uploader.upload(__dirname + "/../uploads/" + req.file.filename);
             if (!imageUpload)
                 res.json({ error: "Error al guardar la nueva imagen" });
             project.image = imageUpload.url;

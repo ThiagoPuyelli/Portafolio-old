@@ -74,8 +74,8 @@ export var updateProject = async (req: Request, res: Response) => {
     if(project){
         if(req.file){
             const imageDelete = await v2.uploader.destroy(project.public_id);
-            if(imageDelete) res.json({error: "Error al eliminar la imagen anterior"});
-            const imageUpload = await v2.uploader.upload(__dirname + "../uploads/" + req.file.filename);
+            if(!imageDelete) res.json({error: "Error al eliminar la imagen anterior"});
+            const imageUpload = await v2.uploader.upload(__dirname + "/../uploads/" + req.file.filename);
             if(!imageUpload) res.json({error: "Error al guardar la nueva imagen"});
             project.image = imageUpload.url;
             project.public_id = imageUpload.public_id;

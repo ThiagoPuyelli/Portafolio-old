@@ -1,6 +1,7 @@
 import express, { NextFunction, Response, Request } from "express";
 import morgan from "morgan";
 import projectRoutes from "./routes/project.routes";
+import adminRoutes from "./routes/admin.routes";
 
 export default (app: any) => {
     
@@ -26,6 +27,7 @@ export default (app: any) => {
     // Routes
 
     app.use(projectRoutes);
+    app.use(adminRoutes);
 
     // Return
 
