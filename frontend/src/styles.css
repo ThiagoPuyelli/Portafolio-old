@@ -1,0 +1,28 @@
+@font-face{
+    src: url("./assets/fonts/Rubik-VariableFont_wght.ttf");
+    font-family: rubik;
+}
+
+@font-face{
+    src: url("./assets/fonts/FontsFree-Net-Lastica.ttf");
+    font-family: lastica;
+}
+
+@font-face {
+    src: url("./assets/fonts/Audiowide-Regular.ttf");
+    font-family: audiowide;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: rubik;
+}
+
+:root{
+    --blue1: #00A6FB;
+    --blue2: #0582CA;
+    --blue3: #006494;
+    --blue4: #003554;
+    --blue5: #051923;
+}
