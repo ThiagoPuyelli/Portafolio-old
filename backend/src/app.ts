@@ -2,6 +2,7 @@ import express, { NextFunction, Response, Request } from "express";
 import morgan from "morgan";
 import projectRoutes from "./routes/project.routes";
 import adminRoutes from "./routes/admin.routes";
+import skillRoutes from "./routes/skill.routes";
 
 export default (app: any) => {
     
@@ -28,6 +29,7 @@ export default (app: any) => {
 
     app.use(projectRoutes);
     app.use(adminRoutes);
+    app.use(skillRoutes);
 
     // Return
 
