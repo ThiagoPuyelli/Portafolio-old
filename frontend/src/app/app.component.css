@@ -11,8 +11,9 @@ header {
     flex-flow: column wrap;
     align-items: center;
     width: 200px;
-    background-color: var(--blue1);
+    background-color: var(--blue5);
     height: 100%;
+    z-index: 1;
 } 
 
 h1 {
@@ -21,8 +22,8 @@ h1 {
     font-family: lastica;
     margin-top: 40px;
     font-size: 40px;
-    color: var(--blue4);
-    text-shadow: 0px 0px 3px var(--blue4);
+    color: var(--blue3);
+    text-shadow: 0px 0px 2px var(--blue2);
     cursor: pointer;
     transition: 300ms all;
 }
@@ -52,4 +53,15 @@ li a {
 
 li a:hover {
     background-color: var(--blue3);
+}
+
+#router {
+    position: absolute;
+    left: 200px;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    background-color: var(--blue3);
+    border: 30px solid var(--blue5);
+    box-shadow: 0px 0px 4px black inset;
 }
