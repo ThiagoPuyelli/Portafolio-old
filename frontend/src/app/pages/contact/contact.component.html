@@ -1,1 +1,32 @@
-<p>contact works!</p>
+<div id="content">
+    <div id="data">
+        <div class="divInfo">
+            <img src="../../../assets/img/email.svg" alt="">
+            <p>thiagopuyelli@gmail.com</p>
+        </div>
+        <div class="divInfo">
+            <img src="../../../assets/img/phone-call.svg" alt="">
+            <p>2325563326</p>
+        </div>
+        <div class="divInfo">
+            <img src="../../../assets/img/github-big-logo.svg" alt="">
+            <a href="https://github.com/ThiagoPuyelli">https://github.com/ThiagoPuyelli</a>
+        </div>
+    </div>
+    <form id="formContact" *ngIf="!validContact" (submit)="sendContact()" [formGroup]="dataForm">
+        <h1 id="titleForm">Enviar consulta</h1>
+        <label>Título</label>
+        <input type="text" placeholder="Título" formControlName="title">
+        <label>Descripción</label>
+        <textarea formControlName="description" placeholder="Descripción"></textarea>
+        <label>Email</label>
+        <input type="email" formControlName="email" placeholder="Email">
+        <label>Teléfono</label>
+        <input type="text" formControlName="phone" placeholder="Teléfono">
+        <span id="msgError">La información no es válida</span>
+        <button type="submit">Enviar Consulta</button>
+    </form>
+    <div id="confirmConsult" *ngIf="validContact">
+        <h1>Mensaje enviado</h1>
+    </div>
+</div>

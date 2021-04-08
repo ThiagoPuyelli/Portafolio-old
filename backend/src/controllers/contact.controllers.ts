@@ -3,6 +3,7 @@ import { Request, Response } from "express";
 
 export var saveContact = async (req: Request, res: Response) => {
     var contact: any = new Contact();
+    console.log(req.body)
 
     for(let i in req.body){
         if(req.body[i] == ""){

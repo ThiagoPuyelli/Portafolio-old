@@ -4,6 +4,7 @@ import projectRoutes from "./routes/project.routes";
 import adminRoutes from "./routes/admin.routes";
 import skillRoutes from "./routes/skill.routes";
 import contactRoutes from "./routes/contact.routes";
+import aboutRoutes from "./routes/about.routes";
 
 export default (app: any) => {
     
@@ -32,6 +33,7 @@ export default (app: any) => {
     app.use(adminRoutes);
     app.use(skillRoutes);
     app.use(contactRoutes);
+    app.use(aboutRoutes);
 
     // Return
 

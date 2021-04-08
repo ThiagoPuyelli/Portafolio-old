@@ -16,6 +16,7 @@ exports.deleteContact = exports.getContacts = exports.saveContact = void 0;
 const Contact_models_1 = __importDefault(require("../models/Contact.models"));
 var saveContact = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     var contact = new Contact_models_1.default();
+    console.log(req.body);
     for (let i in req.body) {
         if (req.body[i] == "") {
             res.json({ error: "Error en la información" });

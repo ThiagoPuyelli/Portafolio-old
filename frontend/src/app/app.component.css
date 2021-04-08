@@ -64,4 +64,5 @@ li a:hover {
     background-color: var(--blue3);
     border: 30px solid var(--blue5);
     box-shadow: 0px 0px 4px black inset;
+    overflow: scroll;
 }
