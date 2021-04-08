@@ -8,6 +8,7 @@ const morgan_1 = __importDefault(require("morgan"));
 const project_routes_1 = __importDefault(require("./routes/project.routes"));
 const admin_routes_1 = __importDefault(require("./routes/admin.routes"));
 const skill_routes_1 = __importDefault(require("./routes/skill.routes"));
+const contact_routes_1 = __importDefault(require("./routes/contact.routes"));
 exports.default = (app) => {
     // Port
     app.set("port", process.env.PORT || 6000);
@@ -27,6 +28,7 @@ exports.default = (app) => {
     app.use(project_routes_1.default);
     app.use(admin_routes_1.default);
     app.use(skill_routes_1.default);
+    app.use(contact_routes_1.default);
     // Return
     return app;
 };
