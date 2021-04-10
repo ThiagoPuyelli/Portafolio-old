@@ -93,3 +93,11 @@ button:hover {
     text-shadow: 0px 0px 1px red;
     font-size: 20px;
 }
+
+.gitLink {
+    color: var(--blue5);
+}
+
+.gitLink:hover {
+    color: black;
+}

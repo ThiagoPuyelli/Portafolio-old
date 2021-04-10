@@ -6,6 +6,6 @@ import { addAbout, updateAbout, deleteAbout, getAbouts } from "../controllers/ab
 router.post("/about", verifyToken, addAbout);
 router.put("/about/:id", verifyToken, updateAbout);
 router.delete("/about/:id", verifyToken, deleteAbout);
-router.get("/about", verifyToken, getAbouts);
+router.get("/about", getAbouts);
 
 export default router;

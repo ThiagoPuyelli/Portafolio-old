@@ -1,3 +1,8 @@
+#todoContent { 
+    width: 100%;
+    margin: 0px !important;
+} 
+
 #content{
     display: flex;
     flex-flow: row wrap;
@@ -65,4 +70,66 @@ li a:hover {
     border: 30px solid var(--blue5);
     box-shadow: 0px 0px 4px black inset;
     overflow: scroll;
+}
+
+@media(max-width: 763px){
+    #todoContent {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    #content {
+        position: relative;
+        width: 100% !important;
+        margin: 0px;
+        height: 240px;
+        top: auto;
+        bottom: auto;
+    }
+
+    #router{
+        position: relative;
+        width: 100%; 
+        border: none;
+        margin: 0px;
+        left: auto;
+        top: auto;
+        bottom: auto;
+        right: auto;
+    }
+
+    header {
+        width: 100%;
+        flex-flow: column wrap;
+    }
+
+    h1{
+        display: block;
+        width: 80%;
+        text-align: center;
+    }
+
+    ul {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        align-items: center !important;
+        height: 100px;
+    }
+
+    li a {
+        margin-top: 0px;
+    }
+
+    #links{
+        width: 80%;
+    }
+
+}
+
+@media(max-width: 612px) {
+    li a {
+        font-size: 18px;
+    }
 }

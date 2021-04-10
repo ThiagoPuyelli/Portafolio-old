@@ -10,5 +10,5 @@ const about_controllers_1 = require("../controllers/about.controllers");
 router.post("/about", verifyToken_1.default, about_controllers_1.addAbout);
 router.put("/about/:id", verifyToken_1.default, about_controllers_1.updateAbout);
 router.delete("/about/:id", verifyToken_1.default, about_controllers_1.deleteAbout);
-router.get("/about", verifyToken_1.default, about_controllers_1.getAbouts);
+router.get("/about", about_controllers_1.getAbouts);
 exports.default = router;

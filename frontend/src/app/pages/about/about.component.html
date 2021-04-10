@@ -1,1 +1,12 @@
-<p>about works!</p>
+<div id="content" *ngIf="principalAbout && abouts.length > 0">
+    <div id="principal">
+        <h1 id="titlePrincipal">{{principalAbout.title}}</h1>
+        <p id="descriptionPrincipal">{{principalAbout.description}}</p>
+    </div>
+    <div id="abouts">
+        <div class="about" *ngFor="let i of abouts">
+            <h1 class="titleAbout">{{i.title}}</h1>
+            <p class="descriptionAbout">{{i.description}}</p>
+        </div>
+    </div>
+</div>

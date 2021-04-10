@@ -1,13 +1,15 @@
-<div id="content">
-    <header>
-        <h1 [routerLink]="['/']">TATO</h1>
-        <ul id="links">
-            <li class="link"><a href="" [routerLink]="['/about']">Sobre mí</a></li>
-            <li class="link"><a href="" [routerLink]="['/contact']">Contacto</a></li>
-            <li class="link"><a href="" [routerLink]="['/briefcase']">Portafolio</a></li>
-        </ul>
-    </header>
-</div>
-<div id="router">
-    <router-outlet></router-outlet>
+<div id="todoContent">
+    <div id="content">
+        <header>
+            <h1 [routerLink]="['/']">TATO</h1>
+            <ul id="links">
+                <li class="link"><a href="" [routerLink]="['/about']">Sobre mí</a></li>
+                <li class="link"><a href="" [routerLink]="['/contact']">Contacto</a></li>
+                <li class="link"><a href="" [routerLink]="['/briefcase']">Portafolio</a></li>
+            </ul>
+        </header>
+    </div>
+    <div id="router">
+        <router-outlet></router-outlet>
+    </div>
 </div>

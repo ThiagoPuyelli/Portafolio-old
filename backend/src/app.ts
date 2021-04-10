@@ -9,7 +9,7 @@ import aboutRoutes from "./routes/about.routes";
 export default (app: any) => {
     
     // Port
-    app.set("port", process.env.PORT || 6000);
+    app.set("port", process.env.PORT || 7000);
 
     // Middlewares
     

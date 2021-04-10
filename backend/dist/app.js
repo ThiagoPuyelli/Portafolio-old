@@ -12,7 +12,7 @@ const contact_routes_1 = __importDefault(require("./routes/contact.routes"));
 const about_routes_1 = __importDefault(require("./routes/about.routes"));
 exports.default = (app) => {
     // Port
-    app.set("port", process.env.PORT || 6000);
+    app.set("port", process.env.PORT || 7000);
     // Middlewares
     app.use(morgan_1.default("dev"));
     app.use(express_1.default.urlencoded({ extended: false }));
