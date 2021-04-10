@@ -8,6 +8,8 @@ import { SkillService } from "../../services/skill.service";
 })
 export class HomeComponent implements OnInit {
 
+  public skills: Array<any> = [];
+
   constructor(
     private skillService: SkillService
   ) { }
@@ -18,7 +20,10 @@ export class HomeComponent implements OnInit {
 
   findSkils(){
     this.skillService.getSkills().subscribe(
-      result => console.log(result),
+      (result: any) => {
+        this.skills = result;
+        console.log(this.skills)
+      },
       err => console.log(err)
     )
   }

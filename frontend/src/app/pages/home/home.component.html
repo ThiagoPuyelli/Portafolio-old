@@ -1,6 +1,15 @@
-<div class="content">
+<div class="content" *ngIf="skills">
     <h1 id="title">
-        Hola, Soy Thiago Puyelli <br />
-         y soy desarrollador web
+        Hola, Soy Thiago Puyelli y soy desarrollador web
     </h1>
+    <div id="skills">
+        <div class="skill" *ngFor="let i of skills">
+            <h1>{{i.skill}}</h1>
+            <img src="{{i.icon}}" alt="">
+            <span>{{i.porcent}}%</span>
+            <div class="bar">
+                <div class="contentBar"></div>
+            </div>
+        </div>
+    </div>
 </div>
