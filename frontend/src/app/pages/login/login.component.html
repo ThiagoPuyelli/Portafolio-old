@@ -1,0 +1,11 @@
+<div id="content">
+    <h1>Logear Administrador</h1>
+    <form [formGroup]="dataForm" (submit)="sendLogin()">
+        <label>Email</label>
+        <input type="email" placeholder="Email" formControlName="email">
+        <label>Contraseña</label>
+        <input type="password" placeholder="Contraseña" formControlName="password">
+        <button type="submit">Enviar</button>
+        <span id="msgError">La informacion no es correcta</span>
+    </form>
+</div>

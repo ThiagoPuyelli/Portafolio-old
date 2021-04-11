@@ -96,6 +96,7 @@ li a:hover {
         top: auto;
         bottom: auto;
         right: auto;
+        overflow: auto;
     }
 
     header {
@@ -132,4 +133,14 @@ li a:hover {
     li a {
         font-size: 18px;
     }
+}
+
+#linkToLogin{
+    position: absolute;
+    font-size: 10px;
+    color: var(--blue4);
+    bottom: 5px;
+    left: 5px;
+    z-index: 2;
+    text-decoration: none;
 }

@@ -34,27 +34,32 @@ var registerAdmin = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
 exports.registerAdmin = registerAdmin;
 var loginAdmin = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const { email, password } = req.body;
-    if (!email || !password || email == "" || password == "")
-        res.json({ error: "La información no es válida" });
-    const admin = yield Admin_models_1.default.findOne({ email });
-    if (!admin)
-        res.json({ auth: false, error: "El email es incorrecto" });
-    const verifyPassword = yield comparePassword_1.default(password, admin.password);
-    if (!verifyPassword)
-        res.json({ auth: false, error: "La contraseña es inválida" });
-    const jwtPassword = process.env.JWT_PASSWORD;
-    if (!jwtPassword)
-        res.json({ error: "Error de la contraseña de jwt" });
-    console.log("alfredo");
-    if (jwtPassword) {
-        const token = jsonwebtoken_1.default.sign({ id: admin._id }, jwtPassword, {
-            expiresIn: 24 * 24 * 60
-        });
-        res.json({
-            auth: true,
-            token
-        });
+    if (!email || !password || email == "" || password == "") {
+        return res.json({ error: "La información no es válida" });
     }
-    ;
+    else {
+        const admin = yield Admin_models_1.default.findOne({ email });
+        if (!admin)
+            return res.json({ auth: false, error: "El email es incorrecto" });
+        var verifyPassword = false;
+        if (admin)
+            verifyPassword = yield comparePassword_1.default(password, admin.password);
+        if (!verifyPassword)
+            return res.json({ auth: false, error: "La contraseña es inválida" });
+        const jwtPassword = process.env.JWT_PASSWORD;
+        if (!jwtPassword)
+            return res.json({ error: "Error de la contraseña de jwt" });
+        console.log("alfredo");
+        if (jwtPassword) {
+            const token = jsonwebtoken_1.default.sign({ id: admin._id }, jwtPassword, {
+                expiresIn: 24 * 24 * 60
+            });
+            res.json({
+                auth: true,
+                token
+            });
+        }
+        ;
+    }
 });
 exports.loginAdmin = loginAdmin;

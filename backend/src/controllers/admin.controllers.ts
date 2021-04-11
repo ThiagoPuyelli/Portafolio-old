@@ -26,26 +26,30 @@ export var registerAdmin = async (req: Request, res: Response) => {
 export var loginAdmin = async (req: Request, res: Response) => {
     const { email, password } = req.body;
     
-    if(!email || !password || email == "" || password == "") res.json({error: "La información no es válida"});
-    const admin: any = await Admin.findOne({email});
-
-    if(!admin) res.json({auth: false, error: "El email es incorrecto"});
-    const verifyPassword: boolean = await comp(password, admin.password);
-
-    if(!verifyPassword) res.json({auth: false, error: "La contraseña es inválida"});
+    if(!email || !password || email == "" || password == "") {
+        return res.json({error: "La información no es válida"})
+    } else {
+        const admin: any = await Admin.findOne({email});
     
-    const jwtPassword: string|undefined = process.env.JWT_PASSWORD;
-    if(!jwtPassword) res.json({error: "Error de la contraseña de jwt"});
-
-    console.log("alfredo")
-    if(jwtPassword) {
-        const token: string = jwt.sign({id: admin._id}, jwtPassword, {
-            expiresIn: 24 * 24 * 60
-        });
-
-        res.json({
-            auth: true,
-            token
-        })
-    };
+        if(!admin) return res.json({auth: false, error: "El email es incorrecto"});
+        var verifyPassword: boolean = false;
+        if(admin) verifyPassword = await comp(password, admin.password);
+    
+        if(!verifyPassword) return res.json({auth: false, error: "La contraseña es inválida"});
+        
+        const jwtPassword: string|undefined = process.env.JWT_PASSWORD;
+        if(!jwtPassword) return res.json({error: "Error de la contraseña de jwt"});
+    
+        console.log("alfredo")
+        if(jwtPassword) {
+            const token: string = jwt.sign({id: admin._id}, jwtPassword, {
+                expiresIn: 24 * 24 * 60
+            });
+    
+            res.json({
+                auth: true,
+                token
+            })
+        };
+    }
 }

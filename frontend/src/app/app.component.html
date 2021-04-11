@@ -1,4 +1,4 @@
-<div id="todoContent">
+<div id="todoContent" *ngIf="!auth">
     <div id="content">
         <header>
             <h1 [routerLink]="['/']">TATO</h1>
@@ -13,3 +13,6 @@
         <router-outlet></router-outlet>
     </div>
 </div>
+<a id="linkToLogin" [routerLink]="['/login']" *ngIf="!auth">L</a>
+
+<app-admin *ngIf="auth"></app-admin>

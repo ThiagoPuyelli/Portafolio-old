@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { VerifyAuthService } from "./services/verify-auth.service";
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'frontend';
+
+  public auth: boolean = false;
+
+  constructor(
+    private verify: VerifyAuthService
+  ){
+    if(verify.auth){
+      this.auth = true;
+    }
+  }
+
+
+
 }

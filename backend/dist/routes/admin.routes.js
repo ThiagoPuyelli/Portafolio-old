@@ -9,4 +9,5 @@ const admin_controllers_1 = require("../controllers/admin.controllers");
 const verifyToken_1 = __importDefault(require("../middlewares/verifyToken"));
 router.post("/admin", verifyToken_1.default, admin_controllers_1.registerAdmin);
 router.post("/login", admin_controllers_1.loginAdmin);
+router.get("/verify-auth", verifyToken_1.default, (req, res) => res.json({ auth: true }));
 exports.default = router;

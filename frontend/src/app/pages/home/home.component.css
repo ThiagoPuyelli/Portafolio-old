@@ -12,3 +12,27 @@
     font-family: audiowide;
     text-transform: uppercase;
 }
+
+#skills {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    margin-top: 60px;
+}
+
+.skill {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 300px;
+}
+
+.skill .image{
+    width: 100%;
+    height: 100px;
+}
+
+.skill img {
+    margin: 0px auto;
+    width: 50%;
+}

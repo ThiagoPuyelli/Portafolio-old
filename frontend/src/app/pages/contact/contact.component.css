@@ -101,3 +101,21 @@ button:hover {
 .gitLink:hover {
     color: black;
 }
+
+@media(max-width: 385px){
+    .divInfo img {
+        width: 50px;
+    }
+
+    .divInfo .gitLink {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 331px){
+    #formContact input,
+    #formContact label,
+    #formContact textarea {
+        width: 250px;
+    }
+}
