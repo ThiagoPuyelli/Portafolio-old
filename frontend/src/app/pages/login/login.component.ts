@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { User } from "../../models/User";
 import { FormGroup, FormBuilder, Validators } from "@angular/forms"; 
 import { AdminService } from "../../services/admin.service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-login',
@@ -18,7 +19,8 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private builder: FormBuilder,
-    private adminService: AdminService
+    private adminService: AdminService,
+    private router: Router
   ) {
     this.user = new User();
    }
@@ -31,10 +33,11 @@ export class LoginComponent implements OnInit {
       this.user = this.dataForm.value;
       console.log(this.user)
       this.adminService.login(this.user).subscribe(
-        (result: any) => {
+        async (result: any) => {
           if(result.auth) {
             sessionStorage.setItem("x-access-token", result.token);
-            location.reload();
+            await this.router.navigate(["/admin"]);
+            await location.reload();
           } else {
             const span: HTMLElement|null = document.querySelector("#msgError");
             if(span) span.style.display = "block";

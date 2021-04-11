@@ -11,6 +11,7 @@ import { BriefcaseComponent } from './pages/briefcase/briefcase.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AdminComponent } from './pages/admin/admin.component';
+import { HomeAdminComponent } from './pages/admin/home-admin/home-admin.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AdminComponent } from './pages/admin/admin.component';
     BriefcaseComponent,
     HomeComponent,
     LoginComponent,
-    AdminComponent
+    AdminComponent,
+    HomeAdminComponent
   ],
   imports: [
     BrowserModule,

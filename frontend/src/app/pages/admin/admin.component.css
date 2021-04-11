@@ -1,0 +1,36 @@
+#content {
+    background-color: var(--blue2); 
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#logout{
+    display: block;
+    width: 40px;
+    position: absolute;
+    cursor: pointer;
+    transition: 300ms all;
+    right: 20px;
+    top: 20px;
+}
+
+#logout:hover {
+    transform: scale(1.2, 1.2);
+}
+
+#home {
+    display: block;
+    width: 40px;
+    position: absolute;
+    cursor: pointer;
+    transition: 300ms all;
+    right: 80px;
+    top: 19px;
+}
+
+#home:hover {
+    transform: scale(1.2, 1.2);
+}
