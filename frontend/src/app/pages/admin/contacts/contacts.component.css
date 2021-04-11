@@ -1,0 +1,50 @@
+#content {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--blue2);
+}
+
+h1 {
+    width: 90%;
+    text-align: center;
+    margin: 30px;
+    font-size: 40px;
+}
+
+#contacts {
+    width: 500px;
+}
+
+.contact{
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 100%;
+    border: 2px solid var(--blue5);
+    padding: 20px 0px 20px 0px;
+}
+
+#spans {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.contact img {
+    width: 50px;
+    margin-right: 20px;
+}
+
+.contact span {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    margin: 20px;
+}

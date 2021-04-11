@@ -1,0 +1,20 @@
+<div id="content">
+    <h1>Contactos</h1>
+    <div id="contacts">
+        <div class="contact" *ngFor="let i of contacts">
+            <h2>{{i.title}}</h2>
+            <p>{{i.description}}</p>
+            <div id="spans">
+                <span>
+                    <img src="../../../../assets/img/email.svg" alt="">
+                    {{i.email}}
+                </span>
+                <span>
+                    <img src="../../../../assets/img/phone-call.svg" alt="">
+                    {{i.phone}}
+                </span>
+            </div>
+            <button type="button">Eliminar contacto</button>
+        </div>
+    </div>
+</div>

@@ -2,21 +2,28 @@
     display: flex;
     flex-flow: column wrap;
     align-items: center; 
-    height: 100%;
-    width: 100%;
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: var(--blue2);
 }
 
 h1 {
+    display: block;
     font-size: 40px;
     margin: 20px;
     text-align: center;
+    width: 90%;
 }
 
 #boxs{
-    width: 100%;
+    width: 90%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-evenly;
+    margin: 0px;
 }
 
 .box {
@@ -44,4 +51,29 @@ h1 {
     font-size: 30px;
     padding-bottom: 10px;
     text-align: center;
+}
+
+@media(max-width: 1070px){
+    #content {
+        position: relative;
+        padding-bottom: 30px;
+    }
+    #boxs {
+        flex-flow: column wrap;
+        align-items: center;
+    }
+}
+
+@media(max-width: 636px){
+    h1{
+        width: 300px;
+    }
+}
+
+
+@media(max-width: 348px){
+    h1{
+        font-size: 32px;
+        margin-top: 80px; 
+    }
 }

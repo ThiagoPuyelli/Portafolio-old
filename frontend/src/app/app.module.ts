@@ -12,6 +12,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
 import { AdminComponent } from './pages/admin/admin.component';
 import { HomeAdminComponent } from './pages/admin/home-admin/home-admin.component';
+import { ContactsComponent } from './pages/admin/contacts/contacts.component';
+import { AboutsComponent } from './pages/admin/abouts/abouts.component';
+import { AdminBriefcaseComponent } from './pages/admin/admin-briefcase/admin-briefcase.component';
+import { AdminSkillComponent } from './pages/admin/admin-skill/admin-skill.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +26,11 @@ import { HomeAdminComponent } from './pages/admin/home-admin/home-admin.componen
     HomeComponent,
     LoginComponent,
     AdminComponent,
-    HomeAdminComponent
+    HomeAdminComponent,
+    ContactsComponent,
+    AboutsComponent,
+    AdminBriefcaseComponent,
+    AdminSkillComponent
   ],
   imports: [
     BrowserModule,

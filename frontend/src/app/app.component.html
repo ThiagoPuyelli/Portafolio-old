@@ -14,4 +14,6 @@
     </div>
 </div>
 <a id="linkToLogin" [routerLink]="['/login']" *ngIf="!auth">L</a>
-<app-admin *ngIf="auth && verifyAuth"></app-admin>
+<div *ngIf="auth && verifyAuth" id="adminBox">
+    <app-admin id="appAdmin"></app-admin>
+</div>

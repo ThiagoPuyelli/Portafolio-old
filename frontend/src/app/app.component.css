@@ -144,3 +144,8 @@ li a:hover {
     z-index: 2;
     text-decoration: none;
 }
+
+#adminBox {
+    background-color: var(--blue2);
+    height: 100%;
+}
