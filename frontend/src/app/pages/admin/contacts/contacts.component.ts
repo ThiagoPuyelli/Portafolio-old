@@ -25,4 +25,11 @@ export class ContactsComponent implements OnInit {
     )
   }
 
+  deleteContact(id: string){
+    this.contactService.deleteContact(id).subscribe(
+      result => location.reload(),
+      err => console.log(err)
+    )
+  }
+
 }

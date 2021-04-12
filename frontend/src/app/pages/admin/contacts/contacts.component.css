@@ -19,6 +19,7 @@ h1 {
 
 #contacts {
     width: 500px;
+    overflow: scroll;
 }
 
 .contact{
@@ -47,4 +48,19 @@ h1 {
     flex-flow: row wrap;
     align-items: center;
     margin: 20px;
+}
+
+.contact button {
+    background-color: var(--blue2);
+    color: rgb(161, 0, 0);
+    padding: 5px;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px red;
+    cursor: pointer;
+    transition: 300ms all;
+}
+
+.contact button:hover {
+    background-color: red;
 }

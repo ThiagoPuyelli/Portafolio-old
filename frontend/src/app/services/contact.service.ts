@@ -25,4 +25,14 @@ export class ContactService {
     }
   }
 
+  deleteContact(id: string){
+    const token: null|string = sessionStorage.getItem("x-access-token");
+    if(token){
+      let headers: HttpHeaders = new HttpHeaders().set("x-access-token", token);
+      return this.http.delete(environment.uri + "/contact/" + id, {headers});
+    } else {
+      return this.http.delete(environment.uri + "/contact/" + id);
+    }
+  }
+
 }

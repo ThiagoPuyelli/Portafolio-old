@@ -23,4 +23,8 @@ export class AdminComponent implements OnInit {
     )
   }
 
+  logout() {
+    sessionStorage.removeItem("x-access-token");
+    location.reload();
+  }
 }

@@ -20,4 +20,12 @@ export var saveContact = async (req: Request, res: Response) => {
 
 export var getContacts = async (req: Request, res: Response) => res.json(await Contact.find());
 
-export var deleteContact = async (req: Request, res: Response) => res.json(await Contact.findByIdAndRemove(req.params.id));
+export var deleteContact = async (req: Request, res: Response) => {
+    console.log("El tato")
+    const contact = await Contact.findByIdAndRemove(req.params.id);
+    if(contact){
+        res.json(contact)
+    } else {
+        res.json("No existe el contacto")
+    }
+};

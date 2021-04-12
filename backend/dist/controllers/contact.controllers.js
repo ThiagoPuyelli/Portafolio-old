@@ -32,5 +32,14 @@ var saveContact = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
 exports.saveContact = saveContact;
 var getContacts = (req, res) => __awaiter(void 0, void 0, void 0, function* () { return res.json(yield Contact_models_1.default.find()); });
 exports.getContacts = getContacts;
-var deleteContact = (req, res) => __awaiter(void 0, void 0, void 0, function* () { return res.json(yield Contact_models_1.default.findByIdAndRemove(req.params.id)); });
+var deleteContact = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    console.log("El tato");
+    const contact = yield Contact_models_1.default.findByIdAndRemove(req.params.id);
+    if (contact) {
+        res.json(contact);
+    }
+    else {
+        res.json("No existe el contacto");
+    }
+});
 exports.deleteContact = deleteContact;
