@@ -16,6 +16,8 @@ import { ContactsComponent } from './pages/admin/contacts/contacts.component';
 import { AboutsComponent } from './pages/admin/abouts/abouts.component';
 import { AdminBriefcaseComponent } from './pages/admin/admin-briefcase/admin-briefcase.component';
 import { AdminSkillComponent } from './pages/admin/admin-skill/admin-skill.component';
+import { ProjectComponent } from './pages/project/project.component';
+import { SaveProjectComponent } from './pages/save-project/save-project.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { AdminSkillComponent } from './pages/admin/admin-skill/admin-skill.compo
     ContactsComponent,
     AboutsComponent,
     AdminBriefcaseComponent,
-    AdminSkillComponent
+    AdminSkillComponent,
+    ProjectComponent,
+    SaveProjectComponent
   ],
   imports: [
     BrowserModule,

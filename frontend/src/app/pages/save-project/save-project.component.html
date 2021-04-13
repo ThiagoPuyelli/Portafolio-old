@@ -1,0 +1,26 @@
+<div id="content">
+    <h1>Subir proyecto</h1>
+    <form [formGroup]="dataForm" (submit)="sendData()">
+        <label>Título</label>
+        <input type="text" placeholder="Título" formControlName="title">
+        <label>Descripción</label>
+        <textarea placeholder="Descripción" formControlName="description"></textarea>
+        <label>Github</label>
+        <input type="text" placeholder="Github" formControlName="github">
+        <label>Url</label>
+        <input type="text" placeholder="Url" formControlName="url">
+        <label>Tecnologías usadas</label>
+        <input type="text" placeholder="Tics" formControlName="inputTic">
+        <ul id="tics">
+            <li class="tic" *ngFor="let i of dataForm.value.tics">
+                {{i}}
+            </li>
+        </ul>
+        <button id="submitTic" (click)="addTic()" type="button">Subir tecnologia</button>
+        <label>Imagen</label>
+        <input type="file" placeholder="Imagen el proyecto" (change)="changeFile($event)">
+        <img src="" id="imageToProject" alt="">
+
+        <button id="submitProject" type="submit">Enviar proyecto</button>
+    </form>
+</div>

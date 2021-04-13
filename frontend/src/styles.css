@@ -19,6 +19,10 @@
     font-family: rubik;
 }
 
+body {
+    background-color: var(--blue2);
+}
+
 :root{
     --blue1: #00A6FB;
     --blue2: #0582CA;

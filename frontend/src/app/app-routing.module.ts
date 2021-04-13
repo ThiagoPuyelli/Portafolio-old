@@ -13,6 +13,8 @@ import { BriefcaseComponent } from './pages/briefcase/briefcase.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
+import { ProjectComponent } from './pages/project/project.component';
+import { SaveProjectComponent } from './pages/save-project/save-project.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent, canLoad: [NoAuthGuard], canActivate: [NoAuthGuard]},
@@ -20,13 +22,15 @@ const routes: Routes = [
   { path: "contact", component: ContactComponent, canLoad: [NoAuthGuard], canActivate: [NoAuthGuard]},
   { path: "briefcase", component: BriefcaseComponent, canLoad: [NoAuthGuard], canActivate: [NoAuthGuard]},
   { path: "login", component: LoginComponent, canLoad: [NoAuthGuard], canActivate: [NoAuthGuard]},
+  { path: "project/:id", component: ProjectComponent },
   { path: "admin", component: AdminComponent, canLoad: [AuthGuard], canActivate: [AuthGuard],
     children: [
       { path: "", component: HomeAdminComponent, canLoad: [AuthGuard], canActivate: [AuthGuard]},
       { path: "abouts", component: AboutsComponent, canLoad: [AuthGuard], canActivate: [AuthGuard]},
       { path: "briefcase", component: AdminBriefcaseComponent, canLoad: [AuthGuard], canActivate: [AuthGuard]},
       { path: "skill", component: AdminSkillComponent, canLoad: [AuthGuard], canActivate: [AuthGuard]},
-      { path: "contacts", component: ContactsComponent, canLoad: [AuthGuard], canActivate: [AuthGuard]}
+      { path: "contacts", component: ContactsComponent, canLoad: [AuthGuard], canActivate: [AuthGuard]},
+      { path: "save-project", component: SaveProjectComponent, canLoad: [AuthGuard], canActivate: [AuthGuard]}
     ]
   }
 ];

@@ -1,7 +1,7 @@
 <div id="content" *ngIf="projects.length > 0">
     <h1>Portafolio</h1>
     <div id="projects">
-        <div class="project" *ngFor="let i of projects">
+        <div class="project" *ngFor="let i of projects" [routerLink]="['/project/' + i._id]">
             <div class="contentProject">
                 <h2>{{i.title}}</h2>
                 <a href="{{i.url}}">{{i.url}}</a>
@@ -11,4 +11,5 @@
             </div>
         </div>
     </div>
+    <a [routerLink]="['/admin/save-project']" id="linkSave">+</a>
 </div>
