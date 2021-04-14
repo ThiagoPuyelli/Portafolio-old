@@ -18,6 +18,9 @@ import { AdminBriefcaseComponent } from './pages/admin/admin-briefcase/admin-bri
 import { AdminSkillComponent } from './pages/admin/admin-skill/admin-skill.component';
 import { ProjectComponent } from './pages/project/project.component';
 import { SaveProjectComponent } from './pages/save-project/save-project.component';
+import { ModifyProjectComponent } from './pages/admin/modify-project/modify-project.component';
+import { ModifySkillComponent } from './pages/admin/modify-skill/modify-skill.component';
+import { SaveSkillComponent } from './pages/admin/save-skill/save-skill.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { SaveProjectComponent } from './pages/save-project/save-project.componen
     AdminBriefcaseComponent,
     AdminSkillComponent,
     ProjectComponent,
-    SaveProjectComponent
+    SaveProjectComponent,
+    ModifyProjectComponent,
+    ModifySkillComponent,
+    SaveSkillComponent
   ],
   imports: [
     BrowserModule,

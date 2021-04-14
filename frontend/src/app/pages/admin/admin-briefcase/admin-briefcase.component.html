@@ -1,13 +1,18 @@
 <div id="content" *ngIf="projects.length > 0">
     <h1>Portafolio</h1>
     <div id="projects">
-        <div class="project" *ngFor="let i of projects" [routerLink]="['/project/' + i._id]">
-            <div class="contentProject">
+        <div class="project" *ngFor="let i of projects">
+            <div class="contentProject" [routerLink]="['/project/' + i._id]">
                 <h2>{{i.title}}</h2>
                 <a href="{{i.url}}">{{i.url}}</a>
             </div>
-            <div class="delete">
-                B
+            <div class="buttons">
+                <div class="button delete">
+                    B
+                </div>
+                <div class="button modify" [routerLink]="['/admin/modify-project/' + i._id]">
+                    M
+                </div>
             </div>
         </div>
     </div>

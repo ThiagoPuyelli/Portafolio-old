@@ -12,7 +12,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.deleteSkill = exports.updateSkill = exports.getSkills = exports.saveSkill = void 0;
+exports.getSkill = exports.deleteSkill = exports.updateSkill = exports.getSkills = exports.saveSkill = void 0;
 const Skill_models_1 = __importDefault(require("../models/Skill.models"));
 const cloudinary_1 = require("cloudinary");
 const fs_1 = __importDefault(require("fs"));
@@ -77,3 +77,5 @@ var deleteSkill = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     res.json("Skill eliminado con éxito");
 });
 exports.deleteSkill = deleteSkill;
+var getSkill = (req, res) => __awaiter(void 0, void 0, void 0, function* () { return res.json(yield Skill_models_1.default.findById(req.params.id)); });
+exports.getSkill = getSkill;

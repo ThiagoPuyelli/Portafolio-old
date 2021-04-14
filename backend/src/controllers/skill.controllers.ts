@@ -74,3 +74,5 @@ export var deleteSkill = async (req: Request, res: Response) => {
     res.json("Skill eliminado con éxito");
 
 }
+
+export var getSkill = async (req: Request, res: Response) => res.json(await Skill.findById(req.params.id));

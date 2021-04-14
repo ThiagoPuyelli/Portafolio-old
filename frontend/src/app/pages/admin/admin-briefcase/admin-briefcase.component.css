@@ -24,27 +24,36 @@ h1 {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
-    width: calc(100% - 40px);
-    padding: 20px;
+    width: 100%;
     border: 1px solid var(--blue5);
     cursor: pointer;
     transition: 300ms all;
 }
 
-.project:hover {
-    background-color: var(--blue4);
+.contentProject{
+    padding: 20px;
+    width: calc(100% - 120px);
+    transition: 300ms all;
 }
 
-.project .delete {
+.project .contentProject:hover {
+    background-color: var(--blue3);
+}
+
+.project .buttons {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    width: 80px;
+}
+
+.project .button {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    height: calc(100% + 40px);
-    margin-top: -20px;
-    margin-right: -20px;
+    height: 100%;
     width: 40px;
-    background-color: rgb(218, 28, 28);
     color: white;
     font-size: 30px;
     box-shadow: 0px 0px 4px var(--blue5), 0px 0px 3px black inset;
@@ -52,8 +61,20 @@ h1 {
     transition: 300ms all;
 }
 
+.project .delete {
+    background-color: rgb(218, 28, 28);
+}
+
 .project .delete:hover {
     background-color: rgb(180, 9, 9);
+}
+
+.project .modify {
+    background-color: var(--blue4);
+}
+
+.project .modify:hover {
+    background-color: var(--blue3);
 }
 
 #linkSave {

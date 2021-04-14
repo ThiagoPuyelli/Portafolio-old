@@ -19,7 +19,7 @@
         <button id="submitTic" (click)="addTic()" type="button">Subir tecnologia</button>
         <label>Imagen</label>
         <input type="file" placeholder="Imagen el proyecto" (change)="changeFile($event)">
-        <img src="" id="imageToProject" alt="">
+        <img src="{{project.image}}" id="imageToProject" alt="">
 
         <span class="msgError">Hay un error en la informacion</span>
         <button id="submitProject" type="submit">Enviar proyecto</button>

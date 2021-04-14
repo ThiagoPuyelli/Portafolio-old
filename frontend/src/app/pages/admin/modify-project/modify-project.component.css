@@ -1,0 +1,84 @@
+#content {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    width: 100%;
+}
+
+h1 {
+    margin: 40px;
+    margin-top: 80px;
+    font-size: 35px;
+}
+
+form {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+form * {
+    margin: 10px;
+}
+
+label {
+    display: block;
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--blue5);
+    text-align: center;
+    width: 300px;
+    font-family: audiowide;
+    font-size: 18px;
+}
+
+input {
+    width: 280px;
+    padding: 10px;
+    font-size: 18px;
+}
+
+input,
+textarea {
+    border: 1px solid var(--blue4);
+    box-shadow: 0px 0px 4px var(--blue5);
+}
+
+textarea {
+    width: 580px;
+    height: 200px;
+    padding: 10px;
+    font-size: 17px;
+}
+
+button {
+    padding: 10px;
+    width: 300px;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 0px 0px 4px var(--blue5);
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+    transition: 300ms all;
+}
+
+#submitTic {
+    background-color: var(--blue3);
+}
+
+#submitTic:hover {
+    background-color: var(--blue4);
+}
+
+#submitProject {
+    background-color: rgb(11, 211, 11);
+}
+
+#submitProject:hover {
+    background-color: rgb(8, 168, 8);
+}
+
+#imageToProject {
+    width: 300px;
+}

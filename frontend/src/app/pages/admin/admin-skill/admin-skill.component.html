@@ -1,1 +1,11 @@
-<p>admin-skill works!</p>
+<div id="content">
+    <h1>Habilidades</h1>
+    <div id="skills">
+        <div class="skill" *ngFor="let i of skills" [routerLink]="['/admin/modify-skill/' + i._id]">
+            <h2>{{i.skill}}</h2>
+            <img src="{{i.icon}}" alt="">
+            <p>{{i.porcent}}%</p>
+        </div>
+    </div>
+    <button id="addSkill" [routerLink]="['/admin/save-skill']">+</button>
+</div>

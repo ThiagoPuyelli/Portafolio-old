@@ -61,6 +61,9 @@ export class SaveProjectComponent implements OnInit {
         result => this.router.navigate(["/admin/briefcase"]),
         err => console.log(err)
       )
+    } else {
+      const span: HTMLElement|null = document.querySelector(".msgError");
+      if(span) span.style.display = "block";
     }
   }
 

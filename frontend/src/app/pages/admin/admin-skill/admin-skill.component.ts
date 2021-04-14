@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SkillService } from "../../../services/skill.service";
 
 @Component({
   selector: 'app-admin-skill',
@@ -7,9 +8,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdminSkillComponent implements OnInit {
 
-  constructor() { }
+  public skills: Array<any> = [];
+
+  constructor(
+    private skillService: SkillService
+  ) { }
 
   ngOnInit(): void {
+    this.getSkills();
+  }
+
+  getSkills(){
+    this.skillService.getSkills().subscribe(
+      (skills: any) => this.skills = skills,
+      err => console.log(err)
+    )
   }
 
 }

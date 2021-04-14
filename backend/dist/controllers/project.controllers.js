@@ -27,6 +27,7 @@ var saveProject = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
                 res.json({ error: "Error al subir la imagen" });
             project.image = imageUpload.url;
             project.public_id = imageUpload.public_id;
+            project.tics = req.body.tics.split(",");
         }
         else {
             res.json({
@@ -88,6 +89,9 @@ exports.deleteProject = deleteProject;
 var updateProject = (req, res) => __awaiter(void 0, void 0, void 0, function* () {
     const project = yield Project_models_1.default.findById(req.params.id);
     if (project) {
+        for (let i in req.body) {
+            project[i] = req.body[i];
+        }
         if (req.file) {
             const imageDelete = yield cloudinary_1.v2.uploader.destroy(project.public_id);
             if (!imageDelete)
@@ -97,9 +101,7 @@ var updateProject = (req, res) => __awaiter(void 0, void 0, void 0, function* ()
                 res.json({ error: "Error al guardar la nueva imagen" });
             project.image = imageUpload.url;
             project.public_id = imageUpload.public_id;
-        }
-        for (let i in req.body) {
-            project[i] = req.body[i];
+            project.tics = req.body.tics.split(",");
         }
         if (!project)
             res.json({ error: "Error al modificar proyecto" });

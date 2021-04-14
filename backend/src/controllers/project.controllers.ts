@@ -15,6 +15,7 @@ export var saveProject = async (req: Request|any, res: Response) => {
             if(!imageUpload) res.json({error: "Error al subir la imagen"});
             project.image = imageUpload.url;
             project.public_id = imageUpload.public_id;
+            project.tics = req.body.tics.split(",");
         } else {
             res.json({
                 error: "Error al recibir la imagen"
@@ -72,6 +73,11 @@ export var updateProject = async (req: Request, res: Response) => {
     const project: any = await Project.findById(req.params.id);
 
     if(project){
+
+        for(let i in req.body){
+            project[i] = req.body[i];
+        }
+
         if(req.file){
             const imageDelete = await v2.uploader.destroy(project.public_id);
             if(!imageDelete) res.json({error: "Error al eliminar la imagen anterior"});
@@ -79,11 +85,9 @@ export var updateProject = async (req: Request, res: Response) => {
             if(!imageUpload) res.json({error: "Error al guardar la nueva imagen"});
             project.image = imageUpload.url;
             project.public_id = imageUpload.public_id;
+            project.tics = req.body.tics.split(",");
         }
 
-        for(let i in req.body){
-            project[i] = req.body[i];
-        }
 
         if(!project) res.json({error: "Error al modificar proyecto"});
 
