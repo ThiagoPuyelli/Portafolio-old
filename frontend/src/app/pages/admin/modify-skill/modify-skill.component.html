@@ -1,1 +1,14 @@
-<p>modify-skill works!</p>
+<div id="content" *ngIf="skill">
+    <h1>Modificar habilidad</h1>
+    <form [formGroup]="dataForm" (submit)="submitSkill()">
+        <label>Nombre de habilidad</label>
+        <input type="text" placeholder="Habilidad" formControlName="skill">
+        <label>Porcentaje</label>
+        <input type="number" min="0" max="100" formControlName="porcent">
+        <label>Ícono</label>
+        <input type="file" placeholder="Ícono de la habilidad" (change)="changeFile($event)">
+        <img src="{{skill.icon}}" alt="" id="imgSkill">
+        <span class="msgError">La información es errónea</span>
+        <button type="submit">Subir habilidad</button>
+    </form>
+</div>

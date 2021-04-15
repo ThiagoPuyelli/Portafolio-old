@@ -21,6 +21,8 @@ import { SaveProjectComponent } from './pages/save-project/save-project.componen
 import { ModifyProjectComponent } from './pages/admin/modify-project/modify-project.component';
 import { ModifySkillComponent } from './pages/admin/modify-skill/modify-skill.component';
 import { SaveSkillComponent } from './pages/admin/save-skill/save-skill.component';
+import { ModifyAboutComponent } from './pages/admin/modify-about/modify-about.component';
+import { SaveAboutComponent } from './pages/admin/save-about/save-about.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +42,9 @@ import { SaveSkillComponent } from './pages/admin/save-skill/save-skill.componen
     SaveProjectComponent,
     ModifyProjectComponent,
     ModifySkillComponent,
-    SaveSkillComponent
+    SaveSkillComponent,
+    ModifyAboutComponent,
+    SaveAboutComponent
   ],
   imports: [
     BrowserModule,

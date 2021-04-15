@@ -25,3 +25,5 @@ export var updateAbout = async (req: Request, res: Response) => res.json(await A
 export var deleteAbout = async (req: Request, res: Response) => res.json(await About.findByIdAndRemove(req.params.id));
 
 export var getAbouts = async (req: Request, res: Response) => res.json(await About.find());
+
+export var getAbout = async (req: Request, res: Response) => res.json(await About.findById(req.params.id));

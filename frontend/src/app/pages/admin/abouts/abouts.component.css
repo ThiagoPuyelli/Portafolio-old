@@ -1,0 +1,72 @@
+#content {
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+}
+
+h1 {
+    font-size: 35px;
+    margin: 40px;
+    margin-top: 80px;
+}
+
+#abouts {
+    display: flex;
+    flex-flow: column wrap;
+}
+
+.about {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    box-shadow: 0px 0px 4px var(--blue5);
+    justify-content: space-between;
+}
+
+.button {
+    padding: 10px;
+    cursor: pointer;
+    border: none;
+    font-size: 17px;
+    margin-left: 5px; 
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0px 0px 4px var(--blue5);
+    transition: 300ms all;
+}
+
+.button.delete {
+    background-color: rgb(235, 43, 43);
+}
+
+.button.delete:hover{
+    background-color: rgb(179, 28, 28);
+}
+
+.button.modify {
+    background-color: var(--blue5);
+}
+
+.button.modify:hover {
+    background-color: var(--blue4);
+}
+
+#addAbout {
+    width: 200px;
+    margin: 30px;
+    padding: 5px;
+    font-size: 25px;
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0px 0px 4px var(--blue5);
+    background-color: var(--blue5);
+    color: white;
+    transition: 300ms all;
+    cursor: pointer;
+} 
+
+#addAbout:hover {
+    background-color: var(--blue4);
+}

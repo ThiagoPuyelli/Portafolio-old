@@ -1,0 +1,10 @@
+<div id="content">
+    <h1>Guardar un sobre mí</h1>
+    <form [formGroup]="dataForm">
+        <label>Título</label>
+        <input type="text" placeholder="Título" formControlName="title">
+        <label>Descripción</label>
+        <textarea placeholder="Descripción" fromControlName="description"></textarea>
+        <button type="submit">Enviar</button>
+    </form>
+</div>

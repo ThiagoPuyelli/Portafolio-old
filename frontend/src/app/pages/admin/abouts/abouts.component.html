@@ -1,1 +1,13 @@
-<p>abouts works!</p>
+<div id="content" *ngIf="abouts">
+    <h1>Modificar sobre mí</h1>
+    <div id="abouts">
+        <div class="about" *ngFor="let i of abouts">
+            <h2>{{i.title}}</h2>
+            <div id="buttons">
+                <button class="button delete">D</button>
+                <button class="button modify" [routerLink]="['/admin/modify-about/' + i._id]">M</button>
+            </div>
+        </div>
+    </div>
+    <button id="addAbout" [routerLink]="['/admin/save-about']">+</button>
+</div>
