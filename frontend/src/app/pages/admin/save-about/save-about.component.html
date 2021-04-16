@@ -1,10 +1,11 @@
 <div id="content">
     <h1>Guardar un sobre mí</h1>
-    <form [formGroup]="dataForm">
+    <form [formGroup]="dataForm" (submit)="saveAbout()">
         <label>Título</label>
         <input type="text" placeholder="Título" formControlName="title">
         <label>Descripción</label>
-        <textarea placeholder="Descripción" fromControlName="description"></textarea>
+        <textarea placeholder="Descripción" formControlName="description"></textarea>
+        <span class="msgError">La información no es válida</span>
         <button type="submit">Enviar</button>
     </form>
 </div>

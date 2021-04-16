@@ -4,7 +4,7 @@
         <div class="about" *ngFor="let i of abouts">
             <h2>{{i.title}}</h2>
             <div id="buttons">
-                <button class="button delete">D</button>
+                <button class="button delete" (click)="deleteAbout(i._id)">D</button>
                 <button class="button modify" [routerLink]="['/admin/modify-about/' + i._id]">M</button>
             </div>
         </div>

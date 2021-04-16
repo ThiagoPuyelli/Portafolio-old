@@ -26,4 +26,11 @@ export class AboutsComponent implements OnInit {
     )
   }
 
+  deleteAbout(id: string){
+    this.aboutService.deleteAbout(id).subscribe(
+      result => location.reload(),
+      err => console.log(err)
+    )
+  }
+
 }

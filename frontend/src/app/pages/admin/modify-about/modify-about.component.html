@@ -1,1 +1,11 @@
-<p>modify-about works!</p>
+<div id="content">
+    <h1>Guardar un sobre mí</h1>
+    <form [formGroup]="dataForm" (submit)="updateAbout()">
+        <label>Título</label>
+        <input type="text" placeholder="Título" formControlName="title">
+        <label>Descripción</label>
+        <textarea placeholder="Descripción" formControlName="description"></textarea>
+        <span class="msgError">La información no es válida</span>
+        <button type="submit">Enviar</button>
+    </form>
+</div>
