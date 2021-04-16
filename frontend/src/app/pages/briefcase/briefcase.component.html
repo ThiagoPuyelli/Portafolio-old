@@ -1,1 +1,9 @@
-<p>briefcase works!</p>
+<div id="content">
+    <h1>Projectos</h1>
+    <div id="projects">
+        <div class="project" *ngFor="let i of projects" [routerLink]="['/project/' + i._id]">
+            <img src="{{i.image}}" alt="">
+            <h2>{{i.title}}</h2>
+        </div>
+    </div>
+</div>
