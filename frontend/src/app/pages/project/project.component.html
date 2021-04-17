@@ -1,4 +1,19 @@
 <div id="content" *ngIf="project">
-    <h1>{{project.title}}</h1>
-    
+    <div id="header">
+        <img src="{{project.image}}" alt="">
+        <div id="data">
+            <h1>{{project.title}}</h1>    
+            <p>{{project.description}}</p>
+        </div>
+    </div>
+    <div id="info">
+        <div id="infoData">
+            <span><b>Url: </b><a href="{{project.url}}">{{project.url}}</a></span>
+            <span><b>Github: </b>{{project.github}}</span>
+        </div>
+        <h2>Tecnologías usadas</h2>
+        <div id="tics">
+            <span class="tic" *ngFor="let i of project.tics">{{i}}</span>
+        </div>
+    </div>
 </div>
