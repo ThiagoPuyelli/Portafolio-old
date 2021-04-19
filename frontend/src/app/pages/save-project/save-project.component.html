@@ -14,6 +14,7 @@
         <ul id="tics">
             <li class="tic" *ngFor="let i of dataForm.value.tics">
                 {{i}}
+                <button class="deleteTic" (click)="deleteTic(i)">X</button>
             </li>
         </ul>
         <button id="submitTic" (click)="addTic()" type="button">Subir tecnologia</button>

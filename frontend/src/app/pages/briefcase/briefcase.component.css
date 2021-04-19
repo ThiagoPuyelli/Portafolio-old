@@ -25,6 +25,7 @@ h1 {
     box-shadow: 0px 0px 4px var(--blue5); 
     cursor: pointer;
     transition: 300ms all;
+    margin: 20px;
 }
 
 .project:hover {

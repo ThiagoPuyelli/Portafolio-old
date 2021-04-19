@@ -67,4 +67,15 @@ export class SaveProjectComponent implements OnInit {
     }
   }
 
+  deleteTic(value: string){
+    const ticsValue: Array<string> = this.dataForm.value.tics
+    for(let i in ticsValue){
+      if(ticsValue[i] == value){
+        ticsValue.splice(parseInt(i), 1);
+      }
+    }
+    this.dataForm.get("tics")?.setValue(ticsValue);
+    console.log(this.dataForm);
+  }
+
 }

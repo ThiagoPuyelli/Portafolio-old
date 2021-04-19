@@ -53,3 +53,13 @@ h2{
     text-align: center;
     text-decoration: underline;
 }
+
+@media(max-width: 1028px){
+    #header {
+        flex-flow: column wrap;
+        align-items: center;
+    }
+    #header img {
+        width: 100%;
+    }
+}

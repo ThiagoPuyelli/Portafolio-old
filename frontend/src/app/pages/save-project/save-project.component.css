@@ -82,3 +82,18 @@ button {
 #imageToProject {
     width: 300px;
 }
+
+.deleteTic {
+    width: 50px;
+    background-color: rgb(206, 7, 7);
+}
+
+.deleteTic:hover {
+    background-color: rgb(180, 4, 4);
+}
+
+@media(max-width: 650px){
+    textarea {
+        width: 280px;
+    }
+}

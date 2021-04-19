@@ -12,18 +12,21 @@ h1 {
     text-align: center;
     margin: 30px;
     font-size: 40px;
+    margin-top: 80px;
 }
 
 #contacts {
-    width: 500px;
-    overflow: scroll;
+    width: 100%;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
 }
 
 .contact{
     display: flex;
     flex-flow: column wrap;
     align-items: center;
-    width: 100%;
+    width: 300px;
     border: 2px solid var(--blue5);
     padding: 20px 0px 20px 0px;
 }
