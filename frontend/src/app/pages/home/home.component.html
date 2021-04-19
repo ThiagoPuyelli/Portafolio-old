@@ -2,6 +2,7 @@
     <h1 id="title">
         Hola, Soy Thiago Puyelli y soy desarrollador web
     </h1>
+    <h2>Habilidades</h2>
     <div id="skills">
         <div class="skill" *ngFor="let i of skills">
             <h4>{{i.skill}}</h4>
@@ -10,7 +11,13 @@
             </div>
             <span>{{i.porcent}}%</span>
             <div class="bar">
-                <div class="contentBar"></div>
+                <div class="contentBar" [ngStyle]="{'width': i.porcent + 'px'}"
+                [ngClass]="{
+                    'barRed': i.porcent <= 30,
+                    'barYellow': i.porcent >= 31 && i.porcent <= 60,
+                    'barGreen': i.porcent > 60 && i.porcent < 100
+                }"
+                ></div>
             </div>
         </div>
     </div>

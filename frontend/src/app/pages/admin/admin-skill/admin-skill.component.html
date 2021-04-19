@@ -1,10 +1,13 @@
 <div id="content">
     <h1>Habilidades</h1>
     <div id="skills">
-        <div class="skill" *ngFor="let i of skills" [routerLink]="['/admin/modify-skill/' + i._id]">
-            <h2>{{i.skill}}</h2>
-            <img src="{{i.icon}}" alt="">
-            <p>{{i.porcent}}%</p>
+        <div class="skillButton" *ngFor="let i of skills">
+            <div class="skill" [routerLink]="['/admin/modify-skill/' + i._id]">
+                <h2>{{i.skill}}</h2>
+                <img src="{{i.icon}}" alt="">
+                <p>{{i.porcent}}%</p>
+            </div>
+            <button id="delete" (click)="deleteSkill(i._id)">X</button>
         </div>
     </div>
     <button id="addSkill" [routerLink]="['/admin/save-skill']">+</button>

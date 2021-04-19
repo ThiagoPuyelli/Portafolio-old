@@ -25,4 +25,11 @@ export class AdminSkillComponent implements OnInit {
     )
   }
 
+  deleteSkill(id: string){
+    this.skillService.deleteSkill(id).subscribe(
+      result => location.reload(),
+      err => console.log(err)
+    )
+  }
+
 }
